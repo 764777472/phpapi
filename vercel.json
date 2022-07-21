@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/api.php": {
+    "*.php": {
       "runtime": "vercel-php@0.5.1",
       "excludeFiles": "{test/**}",
       "memory": 256,
