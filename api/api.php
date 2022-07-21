@@ -1,16 +1,17 @@
 <?php
-	/**
-	 * [setHeader 跨域设置]
-	 */
-	// protected function setHeader()
-	// {
-	// 	header('Content-Type:application/json; charset=utf-8');
-	// 	header("Access-Control-Allow-Origin:*");
-	// 	header("Access-Control-Allow-Methods:POST,GET");
-	// }
-	class base {
-		public function getinfo() {
-			// $this->setHeader();
-			echo "echo text!";
-		}
+	$id = $_POST["user_id"];
+	if ($id != 10086){
+	    exit();
 	}
+	
+	$userinfo = array(
+	    'username'=>'jason',
+	    'password'=>'xxxxxx',
+	);
+	
+	$result = array(
+	          'code'=>'10000',
+	          'message'=>'成功',
+	          'data'=>$userinfo,
+	        );
+	echo json_encode($result);
