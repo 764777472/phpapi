@@ -9,6 +9,6 @@
   },
   "version": 2,
   "routes": [
-      {"src": "/(.*)","dest": "/api/api.php"}
+      {"src": "/api","dest": "/api/api.php"}
   ]
 }
