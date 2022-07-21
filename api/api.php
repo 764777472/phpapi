@@ -1,5 +1,5 @@
 <?php
-	$id = $_POST["user_id"];
+	$id = $_GET["user_id"];
 	if ($id != 10086){
 	    exit();
 	}
