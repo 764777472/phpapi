@@ -7,5 +7,8 @@
       "memory": 256,
       "maxDuration": 5
     }
-  }
+  },
+  "routes": [
+      {"src": "/api","dest": "/api/index.php"}
+  ]
 }
