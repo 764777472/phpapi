@@ -1,13 +1,14 @@
 {
   "functions": {
     "api/api.php": {
-      "runtime": "vercel-php@0.3.1",
+      "runtime": "vercel-php@0.5.1",
       "excludeFiles": "{test/**}",
       "memory": 256,
       "maxDuration": 5
-    },
-	"routes": [
-	    {"src": "/(.*)","dest": "/api/api.php"}
-	]
-  }
+    }
+  },
+  "version": 2,
+  "routes": [
+      {"src": "/(.*)","dest": "/api/api.php"}
+  ]
 }
