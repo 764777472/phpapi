@@ -6,10 +6,10 @@
       "memory": 256,
       "maxDuration": 5
     },
-	"routes": [
+	"rewrites": [
 	    {
-	      "src": "/api",
-	      "dest": "/api/api.php"
+	      "source": "/api/(.*)",
+	      "destination": "/api/api.php"
 	    }
 	]
   }
