@@ -6,6 +6,7 @@
   },
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/(.*)", "destination": "/api/index.php" }
+    { "source": "/(.*)", "destination": "/api/index.php" },
+    { "source": "/audiomack", "destination": "https://audiomack.com/hjqgnfcr2n/playlist/21620589" }
   ]
 }
