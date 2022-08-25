@@ -523,9 +523,7 @@ if (stripos($contentType, "text/html") !== false) {
 
     $scriptElem = $doc->createElement("script",
       '(function() {
-
         if (window.XMLHttpRequest) {
-
           function parseURI(url) {
             var m = String(url).replace(/^\s+|\s+$/g, "").match(/^([^:\/?#]+:)?(\/\/(?:[^:@]*(?::[^:@]*)?@)?(([^:\/?#]*)(?::(\d*))?))?([^?#]*)(\?[^#]*)?(#[\s\S]*)?/);
             // authority = "//" + user + ":" + pass "@" + hostname + ":" port
@@ -541,9 +539,7 @@ if (stripos($contentType, "text/html") !== false) {
               hash : m[8] || ""
             } : null);
           }
-
           function rel2abs(base, href) { // RFC 3986
-
             function removeDotSegments(input) {
               var output = [];
               input.replace(/^(\.\.?(\/|$))+/, "")
@@ -558,18 +554,14 @@ if (stripos($contentType, "text/html") !== false) {
                 });
               return output.join("").replace(/^\//, input.charAt(0) === "/" ? "/" : "");
             }
-
             href = parseURI(href || "");
             base = parseURI(base || "");
-
             return !href || !base ? null : (href.protocol || base.protocol) +
             (href.protocol || href.authority ? href.authority : base.authority) +
             removeDotSegments(href.protocol || href.authority || href.pathname.charAt(0) === "/" ? href.pathname : (href.pathname ? ((base.authority && !base.pathname ? "/" : "") + base.pathname.slice(0, base.pathname.lastIndexOf("/") + 1) + href.pathname) : base.pathname)) +
             (href.protocol || href.authority || href.pathname ? href.search : (href.search || base.search)) +
             href.hash;
-
           }
-
           var proxied = window.XMLHttpRequest.prototype.open;
           window.XMLHttpRequest.prototype.open = function() {
               if (arguments[1] !== null && arguments[1] !== undefined) {
@@ -582,9 +574,7 @@ if (stripos($contentType, "text/html") !== false) {
               }
               return proxied.apply(this, [].slice.call(arguments));
           };
-
         }
-
       })();'
     );
     $scriptElem->setAttribute("type", "text/javascript");
