@@ -335,8 +335,8 @@ if (isset($_POST["miniProxyFormAction"])) {
   $url = $_POST["miniProxyFormAction"];
   unset($_POST["miniProxyFormAction"]);
 } else {
-  $queryParams = [];
 	die($_SERVER);
+  $queryParams = [];
   parse_str($_SERVER["QUERY_STRING"], $queryParams);
   //If the miniProxyFormAction field appears in the query string, make $url start with its value, and rebuild the the query string without it.
   if (isset($queryParams["miniProxyFormAction"])) {
