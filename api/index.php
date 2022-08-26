@@ -55,7 +55,8 @@ $startURL = "";
 //and the configured example URL. The example URL appears in the instructional text on the miniProxy landing page,
 //and is proxied when pressing the 'Proxy It!' button on the landing page if its URL form is left blank.
 $landingExampleURL = "https://example.net";
-
+die($_SERVER);
+exit;
 /****************************** END CONFIGURATION ******************************/
 
 ob_start("ob_gzhandler");
@@ -335,7 +336,6 @@ if (isset($_POST["miniProxyFormAction"])) {
   $url = $_POST["miniProxyFormAction"];
   unset($_POST["miniProxyFormAction"]);
 } else {
-	die($_SERVER);
   $queryParams = [];
   parse_str($_SERVER["QUERY_STRING"], $queryParams);
   //If the miniProxyFormAction field appears in the query string, make $url start with its value, and rebuild the the query string without it.
