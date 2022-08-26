@@ -55,8 +55,6 @@ $startURL = "";
 //and the configured example URL. The example URL appears in the instructional text on the miniProxy landing page,
 //and is proxied when pressing the 'Proxy It!' button on the landing page if its URL form is left blank.
 $landingExampleURL = "https://example.net";
-print_r($_SERVER);
-exit;
 /****************************** END CONFIGURATION ******************************/
 
 ob_start("ob_gzhandler");
